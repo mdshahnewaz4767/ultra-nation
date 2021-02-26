@@ -13,6 +13,7 @@ function App() {
     })
     .catch(err => console.log("Error"));
  }, [])
+ 
   return (
     <div className="App">
       <h1>Country Loaded: {countries.length}</h1>
