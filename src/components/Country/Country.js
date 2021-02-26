@@ -5,6 +5,10 @@ const Country = (props) => {
     
     //Using Destructuring for load data
     const {name, flag, population, region} = props.country;
+
+    //for event handler
+    const handleAddCountry = props.handleAddCountry;
+
     return (
         <div  className="country-area">
             <div>
@@ -12,6 +16,7 @@ const Country = (props) => {
                 <img src={flag} alt=""/>
                 <p>Population {population}</p>
                 <p>Region {region}</p>
+                <button onClick={() => handleAddCountry(props.country)}>Add Country</button>
             </div>
         </div>
     );
