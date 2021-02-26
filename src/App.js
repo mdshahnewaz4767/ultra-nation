@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <h1>Country Loaded: {countries.length}</h1>
       {
-       countries.map(country => <Country country={country}></Country>)
+       countries.map(country => <Country country={country} key={country.alpha3Code}></Country>)
       }
     </div>
   );
