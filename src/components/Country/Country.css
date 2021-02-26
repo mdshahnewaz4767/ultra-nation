@@ -1,0 +1,7 @@
+.country-area{
+    display: flex;
+    border: 2px solid salmon;
+    width: 25%;
+    display: inline-block;
+    margin: 10px;
+}

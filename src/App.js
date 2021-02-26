@@ -1,6 +1,6 @@
-import './App.css';
 import { useEffect, useState } from 'react';
 import Country from './components/Country/Country';
+import './App.css';
 
 function App() {
   const [countries, setCountries] =  useState([]);
@@ -9,8 +9,8 @@ function App() {
     .then(res => res.json())
     .then(data => {
       setCountries(data);
-      const names = data.map(country => country.name);
-      console.log(names);
+      // const names = data.map(country => country.name);
+      // console.log(names);
     })
     .catch(err => console.log("Error"));
  }, [])
@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <h1>Country Loaded: {countries.length}</h1>
       {
-       countries.map(country => <Country name={country.name}></Country>)
+       countries.map(country => <Country country={country}></Country>)
       }
     </div>
   );
